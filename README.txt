@@ -1,3 +1,1 @@
-Teste aula Git
-Consegui fazer sozinha!
-Teste 
+Esse repositório será para armazenar os trabalhos e projetos da Academia UFN. 
