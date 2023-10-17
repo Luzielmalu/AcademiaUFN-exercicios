@@ -12,7 +12,7 @@ public class Livro implements Imprimivel{
     this.emprestado = false;
     }
     public boolean  reservar(){
-    if(emprestado == !emprestado){
+    if(!emprestado){
         emprestado = true;
         return true;
     }else{
@@ -44,15 +44,21 @@ public class Livro implements Imprimivel{
     return this.emprestado;
     }
 
-    @override
-    public boolean imprimir(){
-        if(!emprestado){
-            System.out.println("Impressão feita com sucesso!")
-
-        }else{
-            System.out.println("O livro não pode ser impresso.")
+    @Override
+    public boolean imprimir() {
+        if (!emprestado) {
+            if (this instanceof Livro) {
+                nroCopias;
+            }
+            return true;
         }
-        
-        
+        return false;
     }
+
+    
+
 }
+
+interface Imprimivel {
+    boolean imprimir();
+    }

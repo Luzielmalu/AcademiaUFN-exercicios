@@ -2,6 +2,24 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) throws Exception {
+
+        System.out.println("Livro:");
+        livro.exibir_info();
+        livro.reservar();
+        livro.exibir_info();
+        livro.devolver();
+        livro.exibir_info();
+        livro.imprimir();
+
+        System.out.println("Revista:");
+        revista.exibir_info();
+        revista.reservar();
+        revista.exibir_info();
+        revista.devolver();
+        revista.exibir_info();
+        revista.imprimir();
+
+
         Biblioteca biblioteca = new Biblioteca();
 
        Livro l1 = new Livro("O Príncipe "," Nicolau Maquiavél ", " Isbn1 " );
@@ -18,9 +36,13 @@ public class Main {
 
        Livro l3 = new Livro(" O Poder da Ação "," Paulo Vieira "," Isbn3 " );
 
+
        biblioteca.addLivro(l3);
        boolean emprestado = biblioteca.emprestar_livro("Isbn3");
        System.out.println("Emprestimo do l3 efetuado " + emprestado);
+
+       Revista r1 = new Revista("Caras", "Abril", "2");
+       Revista r2 = new REvista("Contigo", "Abril", "6");
 
        biblioteca.devolver_livro("Isbn3");
 
