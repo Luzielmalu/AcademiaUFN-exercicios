@@ -1,4 +1,4 @@
-public class Livro {
+public class Livro implements Imprimivel{
     private String titulo;
     private String autor;
     private String isbn;
@@ -42,5 +42,17 @@ public class Livro {
     }
     public boolean getEmprestado(){
     return this.emprestado;
+    }
+
+    @override
+    public boolean imprimir(){
+        if(!emprestado){
+            System.out.println("Impressão feita com sucesso!")
+
+        }else{
+            System.out.println("O livro não pode ser impresso.")
+        }
+        
+        
     }
 }
