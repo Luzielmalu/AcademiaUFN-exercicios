@@ -1,8 +1,7 @@
 public interface Imprimivel{
 
-    public boolean imprimir(){
-
-
-    }
+    public boolean imprimir();
+        
+    
 
 }

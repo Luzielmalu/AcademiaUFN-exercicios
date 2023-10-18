@@ -1,10 +1,11 @@
-public class Livro implements Imprimivel{
+public class Livro  implements Imprimivel{
     private String titulo;
     private String autor;
     private String isbn;
     private boolean emprestado;
 
     public  Livro(String titulo, String autor, String isbn){
+        
 
     this.titulo = titulo;
     this.autor = autor;
@@ -19,9 +20,9 @@ public class Livro implements Imprimivel{
         return false;
         }
     }
-    public boolean devolver(){
+    public void devolver(){
     emprestado = false;
-    return false;    
+
     
     }
     public String exibir_info(){
@@ -48,17 +49,14 @@ public class Livro implements Imprimivel{
     public boolean imprimir() {
         if (!emprestado) {
             if (this instanceof Livro) {
-                nroCopias;
+            
             }
             return true;
         }
         return false;
     }
-
-    
-
-}
-
 interface Imprimivel {
     boolean imprimir();
     }
+
+}

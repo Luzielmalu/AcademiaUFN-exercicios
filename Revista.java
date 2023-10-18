@@ -6,12 +6,42 @@ public class Revista implements Imprimivel {
     private int nroCopias;
 
     
-    public Revista(String titulo, String empresa, int edicao) {
+    public Revista(String titulo, String empresa, int edicao, int nroCopias) {
         this.titulo = titulo;
         this.empresa = empresa;
         this.edicao = edicao;
         this.emprestado = false; 
         this.nroCopias = 1;
+    }
+    public String getTitulo() {
+        return titulo;
+    }
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
+    }
+    public String getEmpresa() {
+        return empresa;
+    }
+    public void setEmpresa(String empresa) {
+        this.empresa = empresa;
+    }
+    public int getEdicao() {
+        return edicao;
+    }
+    public void setEdicao(int edicao) {
+        this.edicao = edicao;
+    }
+    public boolean isEmprestado() {
+        return emprestado;
+    }
+    public void setEmprestado(boolean emprestado) {
+        this.emprestado = emprestado;
+    }
+    public int getNroCopias() {
+        return nroCopias;
+    }
+    public void setNroCopias(int nroCopias) {
+        this.nroCopias = nroCopias;
     }
 
     
