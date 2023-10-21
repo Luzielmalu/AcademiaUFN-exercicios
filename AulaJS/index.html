@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.7.1.min.js"></script>
+    
+</head>
+
+<body>
+    
+    Informe o seu nome: 
+    <input type="text" id="nomeInput">
+    <input type="number" id="idadeInput">
+    <button id="mostrarBotao">Mostrar mensagem</button>
+    <p id="campoMensagem"></p>
+    
+    <script>
+        $(document).ready(function(){
+            $("#mostrarBotao").click(function(){
+                var nome = $("#nomeInput").val();
+                var idade = $("#idadeInput").val();
+                if(idade !== "" || idade !== "") {
+                    var mensagem = nome + " tem " + idade + " anos.";
+                    $("#campoMensagem").text(mensagem);
+                }else{
+                $("#campoMensagem").text("Dados inválidos. Digite seu nome e sua idade.");
+                }
+            });
+        });
+    </script>
+    
+</body>
+</html>
