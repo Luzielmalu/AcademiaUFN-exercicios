@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pets Chiquita</title>
     <link rel="stylesheet" href="estilo.css">
+    <script src="javascript.js"></script> 
     <style>
         h1{
             color: black;
@@ -55,11 +56,21 @@
             padding: 10px;
             padding-left: 10px;
         }
+        #blocoAgendamento{
+            border: 1px solid black;
+            border-color: pink;
+            background-color: rgba(255, 228, 196, 0.525);
+            margin: 10px;
+            padding: 10px;
+            padding-left: 10px;
+        }
         h3{
             background-color:rgb(179, 143, 212);
             font-size: 25px;
         }
-        
+        label{
+            font-size: 20;
+        }
     </style>
 </head>
     <body>
@@ -112,6 +123,50 @@
           </table>
         <h6>*Preços podendo sofrer alterações. Consulte!</h6>
         </div>
+        <form>
+        <div id="blocoAgendamento">
+        <h3>Gostaria de agendar algum serviço?</h3>
+        <h5>Selecione o serviço</h5>
+        <label for="servicos">Serviços:</label>
+        <select name="Serviços:">
+            <option value="selecione">--selecione--</option>
+            <option value="banho">Banho</option>
+            <option value="tosa">Tosa</option>
+            <option value="consulta veterinaria">Consulta veterinaria</option>
+            <option value="limpeza de ouvidos">Limpeza de ouvidos</option>
+            <option value="corte de unhas">Corte de unhas</option>
+        </select>
+        <h5>Selecione o dia</h5>
+        <label for="dia">Dias disponíveis:</label>
+        <select name="Dias disponiveis:">
+            <option value="selecione">--selecione--</option>
+            <option value="segunda">Segunda-feira</option>
+            <option value="terca">Terça-feira</option>
+            <option value="quarta">Quarta-feira</option>
+            <option value="quinta">Quinta-feira</option>
+            <option value="sexta">Sexta-feira</option>
+            <option value="sabado">Sábado</option>
+        </select>
+        <h5>Selecione o horário:</h5>
+        <label for="horario">Horários disponíveis:</label>
+        <select name="Horário disponíveis:">
+            <option value="selecione">--selecione--</option>
+            <option value="09:00">09:00</option>
+            <option value="10:00">10:00</option>
+            <option value="11:00">11:00</option>
+            <option value="14:00">14:00</option>
+            <option value="15:00">15:00</option>
+            <option value="16:00">16:00</option>
+            <option value="17:00">17:00</option>
+        </select>
+        <h5>Quer deixar alguma observação?</h5>
+        <label for="observacoes">Observações:</label><br>
+        <textarea name="observacoes"></textarea><br>
+
+        <input type="submit" value= "Agendar" onclick="alert(texto2)"></button>
+        <input type="submit" value= "Cancelar" onclick="alert(texto3)"></button>
+        </form>
+        </div>
         <div id="blocoProdutos">
         <h3>Nossos produtos:</h3>
         <h5>Caminha</h5>
@@ -139,13 +194,16 @@
         </ul>
         </div>
         <div id="blocoCadastro">
-        <h3>Cadastre-se aqui, digite seus dados:</h3>
+        <h3>Receba nossas novidades, digite seus dados:</h3>
         <form>
             <label for="nome">Nome:</label><br>
-            <input type="nome" name="E-mail"><br>
-            <label for="email">Email:</label><br>
+            <input type="nome" name="Nome"><br>
+            <label for="email">E-mail:</label><br>
             <input type="email" name="E-mail"><br>
-            <input type="submit" value="Enviar"><br>
+            <label for="pet">Qual seu pet?</label><br>
+            <input type="Qual seu pet?" name="Pet"><br>
+            <input type="submit" value="Cadastrar" onclick="alert(texto)"><br>
+            
         </form>
         </div>
         <img src="c:\Users\jucel\Downloads\Nomads - Cat.png" alt="Gatinho">
