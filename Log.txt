@@ -1,0 +1,28 @@
+out. 24, 2023 8:21:55 PM Principal main
+INFORMA합ES: Primeiro valor inserido: 5.0
+out. 24, 2023 8:22:10 PM Principal main
+INFORMA합ES: Segundo valor inserido: 5.0
+out. 24, 2023 8:32:37 PM Principal main
+INFORMA합ES: Primeiro valor inserido: 5.0
+out. 24, 2023 8:32:52 PM Principal main
+INFORMA합ES: Segundo valor inserido: 2.0
+out. 24, 2023 8:32:52 PM Principal main
+INFORMA합ES: Resultado: 5.02.010.0
+out. 24, 2023 8:34:44 PM Principal main
+INFORMA합ES: Primeiro valor inserido: 10.0
+out. 24, 2023 8:34:46 PM Principal main
+INFORMA합ES: Segundo valor inserido: 5.0
+out. 24, 2023 8:34:46 PM Principal main
+INFORMA합ES: Resultado: 10.05.050.0
+out. 24, 2023 8:47:27 PM Principal main
+INFORMA합ES: Primeiro valor inserido: 2.0
+out. 24, 2023 8:47:36 PM Principal main
+INFORMA합ES: Segundo valor inserido: 3.0
+out. 24, 2023 8:47:36 PM Principal main
+INFORMA합ES: Resultado: 2.0 3.0 : 6.0
+out. 24, 2023 10:08:07 PM Principal main
+INFORMA합ES: Primeiro valor inserido: 3.0
+out. 24, 2023 10:08:10 PM Principal main
+INFORMA합ES: Segundo valor inserido: 5.0
+out. 24, 2023 10:08:10 PM Principal main
+INFORMA합ES: Resultado: 3.0+ 5.0 = 8.0
