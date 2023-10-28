@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da velha</title>
+    <script src="javascript.js"></script> 
+    <link rel="stylesheet" href="estilo.css">
+    <style>
+        
+        table {
+            border-collapse: collapse;
+            margin: 0 auto;
+            color: white;
+            
+        }
+        #blocoJogoVelha{
+            border: 1px solid black;
+            border-color: black;
+            background-color: aquamarine ;
+            margin: 10px;
+            padding: 10px;
+            padding-left: 10px;
+            font-weight: 50;
+            width: 200x;
+            
+        } 
+        td {
+            width: 50px;
+            height: 50px;
+            text-align: center;
+            vertical-align: middle;
+            font-size: 24px;
+            border: 1px solid black;
+            background-color: blueviolet;
+            
+        }  
+        h1 {
+            text-align: center;
+            font-style: italic;
+            
+            
+            
+        }
+        button{
+            color: rgb(220, 13, 13);
+            border-radius: 20px;
+            cursor: pointer;
+            
+            
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+    
+        
+    </style>
+</head>
+<body>
+    <div id="blocoJogoVelha">
+    <h1>Tabela jogo da velha</h1>
+<form>
+<table border="2">
+    <thead>
+
+
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+
+    </thead>
+
+
+</table>
+    <p id="mensagem"></p>
+    <button id="reiniciar" onclick="alert(texto2)">Reiniciar</button>
+</form>       
+</div>
+
+
+<script>
+
+    let jogadorAtual = 'X';
+    let jogoEncerrado = false;
+    const celulas = document.querySelectorAll('td');
+    const mensagem = document.getElementById('mensagem');
+    const botaoReiniciar = document.getElementById('reiniciar');
+
+
+
+    celulas.forEach(celula => {
+    celula.addEventListener('click', () => fazerJogada(celula));
+    });
+    botaoReiniciar.addEventListener('click', reiniciarJogo);
+
+function fazerJogada(celula) {
+    if (celula.innerHTML === '' && !jogoEncerrado) {
+        celula.innerHTML = jogadorAtual;
+        if (verificarVitoria()) {
+            mensagem.innerHTML = `Jogador ${jogadorAtual} venceu!`;
+            alert(`Jogador ${jogadorAtual} venceu!`);
+            jogoEncerrado = true;
+            
+        } else if (verificarEmpate()) {
+            mensagem.innerHTML = 'Deu empate!';
+            jogoEncerrado = true;
+            alert('O jogo empatou!');
+        } else {
+            jogadorAtual = jogadorAtual === 'X' ? 'O' : 'X';
+        }
+    }
+    
+    function verificarVitoria() {
+        const combinacoesVitoria = [
+            [0, 1, 2], [3, 4, 5], [6, 7, 8],
+            [0, 3, 6], [1, 4, 7], [2, 5, 8],
+            [0, 4, 8], [2, 4, 6]
+        ];
+        for (const combinacao of combinacoesVitoria) {
+            const [a, b, c] = combinacao;
+            if (celulas[a].innerHTML && celulas[a].innerHTML === celulas[b].innerHTML && celulas[a].innerHTML === celulas[c].innerHTML) {
+                return true;
+            }
+        }
+        return false;
+    }
+    function verificarEmpate() {
+        for (const celula of celulas) {
+            if (celula.innerHTML === '') {
+                return false;
+            }
+        }
+        return true;
+    }
+    function reiniciarJogo() {
+        for (const celula of celulas) {
+            celula.innerHTML = '';
+        }
+        mensagem.innerHTML = '';
+        jogadorAtual = 'X';
+        jogoEncerrado = false;
+        
+    }
+
+}    
+    
+</script>
+
+</body>
+</html>
