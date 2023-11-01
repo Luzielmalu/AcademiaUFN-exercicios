@@ -116,13 +116,12 @@ function fazerJogada(celula) {
         celula.innerHTML = jogadorAtual;
         if (verificarVitoria()) {
             mensagem.innerHTML = `Jogador ${jogadorAtual} venceu!`;
-            alert(`Jogador ${jogadorAtual} venceu!`);
             jogoEncerrado = true;
             
         } else if (verificarEmpate()) {
             mensagem.innerHTML = 'Deu empate!';
             jogoEncerrado = true;
-            alert('O jogo empatou!');
+            
         } else {
             jogadorAtual = jogadorAtual === 'X' ? 'O' : 'X';
         }
